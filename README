@@ -73,6 +73,7 @@ print out the value of the expression.
         System.out.println(expr.value());
     }
 
+There's another included example: the graphing applet in example/example.html
 
 
 OTHER FEATURES
