@@ -1,0 +1,49 @@
+Numbers                 1               42.5
+Variables               x               longvariablename
+{\i x {\sup y}}         x ^ y           3^2 = 9
+                                        2^2^3 = 2^8 = 256
+Multiply, divide        x * y           3*2 = 6
+                        x / y           3/2 = 1.5
+Add, subtract, negate   x + y           3+2 = 5
+                        x - y           3-2 = 1
+                        -x              -3 = 0-3
+Comparison              x < y           2<3 = 1
+                                        2<2 = 0
+                                        3<2 = 0
+                        x <= y          2<=3 = 1
+                                        2<=2 = 1
+                                        3<=2 = 0
+                        x = y           2=3 = 0
+                                        2=2 = 1
+                        x <> y          2<>3 = 1
+                                        2<>2 = 0
+                        x >= y          same as {\code y <= x}
+                        x > y           same as {\code y < x}
+Conjunction             x and y         1 and 1 = 1
+                                        1 and 0 = 0
+                                        0 and 0 = 0
+Disjunction             x or y          1 or 1 = 1
+                                        1 or 0 = 1
+                                        0 or 0 = 0
+Absolute value          abs(x)          abs(-2) = 2
+                                        abs(2) = 2
+Arc-cosine              acos(x)         acos(1) = 0
+Arc-sine                asin(x)         asin(1) = pi/2
+Arc-tangent             atan(x)         atan(1) = pi/4
+                        atan2(x, y)     atan(-1, -1) = -3 pi / 4
+Ceiling                 ceil(x)         ceil(3.5) = 4
+                                        ceil(-3.5) = -3
+Cosine                  cos(x)          cos(0) = 1
+{\i e {\sup x}}         exp(x)          exp(1) = 2.7182818284590451
+Floor                   floor(x)        floor(3.5) = 3
+                                        floor(-3.5) = -4
+Conditional             if(x, y, z)     if(1, 42, 137) = 42
+                                        if(0, 42, 137) = 137
+Natural logarithm       log(x)          log(2.7182818284590451) = 1
+Maximum                 max(x, y)       max(2, 3) = 3
+Minimum                 min(x, y)       min(2, 3) = 2
+Rounding                round(x)        round(3.5) = 4
+                                        round(-3.5) = -4
+Sine                    sin(x)          sin(pi/2) = 1
+Square root             sqrt(x)         sqrt(9) = 3
+Tangent                 tan(x)          {\code tan(pi/4) = 1} (approximately)

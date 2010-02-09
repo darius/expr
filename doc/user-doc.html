@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!-- This document was created with Latte version 2.1 -->
+<!-- For information on Latte, see http://www.latte.org/ -->
+<html>
+<head><meta name="generator" content="Latte 2.1"><title>Expressing Formulas</title></head>
+   <body bgcolor="ivory"><p><h1>Expressing formulas</h1>
+
+<p>Here's how you can enter your formulas.  It's almost but not quite
+like ordinary math notation from the textbooks; there are differences
+because you have to type into input boxes instead of writing things
+out freehand.  For instance, to express <i>x<sup>2</sup></i>+1 you type in
+<code>x^2+1</code>.
+
+<p><h2>Basics</h2>
+
+<p>Adding and subtracting work as you'd expect: <code>x+5</code>, <code>1-x</code>.
+
+<p>To multiply, use <code>*</code>: <code>7*x</code> means 7 times <i>x</i>.
+
+<p>To divide, use <code>/</code>: <code>x/3</code> means <i>x</i> divided by 3.
+
+<p><i>x <sup>n</sup></i> is written <code>x^n</code>.
+
+<p>The square root of <i>x</i> is written <code>sqrt(x)</code>.
+
+<p>Putting all this together, here's a bigger example, a solution to the
+quadratic equation:<br><code>sqrt(b^2 - 4*a*c) / (2*a)</code>.
+
+<p><h2>Reference Manual</h2>
+
+<p><table align="center" width="95%" cellpadding="5" border="0"><tr><td><b>Feature</b></td>
+     <td><b>Syntax</b></td>
+     <td><b>Examples</b></td></tr> <tr><td>Numbers</td>
+     <td><code>1</code></td>
+     <td><dl><dt><code>42.5</code></dt></dl></td></tr> <tr><td>Variables</td>
+     <td><code>x</code></td>
+     <td><dl><dt><code>longvariablename</code></dt></dl></td></tr> <tr><td><i>x <sup>y</sup></i></td>
+     <td><code>x ^ y</code></td>
+     <td><dl><dt><code>3^2 = 9</code></dt><dt><code>2^2^3 = 2^8 = 256</code></dt></dl></td></tr> <tr><td>Multiply, divide</td>
+     <td><code>x * y</code></td>
+     <td><dl><dt><code>3*2 = 6</code></dt></dl></td></tr> <tr><td></td>
+     <td><code>x / y</code></td>
+     <td><dl><dt><code>3/2 = 1.5</code></dt></dl></td></tr> <tr><td>Add, subtract, negate</td>
+     <td><code>x + y</code></td>
+     <td><dl><dt><code>3+2 = 5</code></dt></dl></td></tr> <tr><td></td>
+     <td><code>x - y</code></td>
+     <td><dl><dt><code>3-2 = 1</code></dt></dl></td></tr> <tr><td></td>
+     <td><code>-x</code></td>
+     <td><dl><dt><code>-3 = 0-3</code></dt></dl></td></tr> <tr><td>Comparison</td>
+     <td><code>x &lt; y</code></td>
+     <td><dl><dt><code>2&lt;3 = 1</code></dt><dt><code>2&lt;2 = 0</code></dt><dt><code>3&lt;2 = 0</code></dt></dl></td></tr> <tr><td></td>
+     <td><code>x &lt;= y</code></td>
+     <td><dl><dt><code>2&lt;=3 = 1</code></dt><dt><code>2&lt;=2 = 1</code></dt><dt><code>3&lt;=2 = 0</code></dt></dl></td></tr> <tr><td></td>
+     <td><code>x = y</code></td>
+     <td><dl><dt><code>2=3 = 0</code></dt><dt><code>2=2 = 1</code></dt></dl></td></tr> <tr><td></td>
+     <td><code>x &lt;&gt; y</code></td>
+     <td><dl><dt><code>2&lt;&gt;3 = 1</code></dt><dt><code>2&lt;&gt;2 = 0</code></dt></dl></td></tr> <tr><td></td>
+     <td><code>x &gt;= y</code></td>
+     <td><dl><dt>same as <code>y &lt;= x</code></dt></dl></td></tr> <tr><td></td>
+     <td><code>x &gt; y</code></td>
+     <td><dl><dt>same as <code>y &lt; x</code></dt></dl></td></tr> <tr><td>Conjunction</td>
+     <td><code>x and y</code></td>
+     <td><dl><dt><code>1 and 1 = 1</code></dt><dt><code>1 and 0 = 0</code></dt><dt><code>0 and 0 = 0</code></dt></dl></td></tr> <tr><td>Disjunction</td>
+     <td><code>x or y</code></td>
+     <td><dl><dt><code>1 or 1 = 1</code></dt><dt><code>1 or 0 = 1</code></dt><dt><code>0 or 0 = 0</code></dt></dl></td></tr> <tr><td>Absolute value</td>
+     <td><code>abs(x)</code></td>
+     <td><dl><dt><code>abs(-2) = 2</code></dt><dt><code>abs(2) = 2</code></dt></dl></td></tr> <tr><td>Arc-cosine</td>
+     <td><code>acos(x)</code></td>
+     <td><dl><dt><code>acos(1) = 0</code></dt></dl></td></tr> <tr><td>Arc-sine</td>
+     <td><code>asin(x)</code></td>
+     <td><dl><dt><code>asin(1) = pi/2</code></dt></dl></td></tr> <tr><td>Arc-tangent</td>
+     <td><code>atan(x)</code></td>
+     <td><dl><dt><code>atan(1) = pi/4</code></dt></dl></td></tr> <tr><td></td>
+     <td><code>atan2(x, y)</code></td>
+     <td><dl><dt><code>atan(-1, -1) = -3 pi / 4</code></dt></dl></td></tr> <tr><td>Ceiling</td>
+     <td><code>ceil(x)</code></td>
+     <td><dl><dt><code>ceil(3.5) = 4</code></dt><dt><code>ceil(-3.5) = -3</code></dt></dl></td></tr> <tr><td>Cosine</td>
+     <td><code>cos(x)</code></td>
+     <td><dl><dt><code>cos(0) = 1</code></dt></dl></td></tr> <tr><td><i>e <sup>x</sup></i></td>
+     <td><code>exp(x)</code></td>
+     <td><dl><dt><code>exp(1) = 2.7182818284590451</code></dt></dl></td></tr> <tr><td>Floor</td>
+     <td><code>floor(x)</code></td>
+     <td><dl><dt><code>floor(3.5) = 3</code></dt><dt><code>floor(-3.5) = -4</code></dt></dl></td></tr> <tr><td>Conditional</td>
+     <td><code>if(x, y, z)</code></td>
+     <td><dl><dt><code>if(1, 42, 137) = 42</code></dt><dt><code>if(0, 42, 137) = 137</code></dt></dl></td></tr> <tr><td>Natural logarithm</td>
+     <td><code>log(x)</code></td>
+     <td><dl><dt><code>log(2.7182818284590451) = 1</code></dt></dl></td></tr> <tr><td>Maximum</td>
+     <td><code>max(x, y)</code></td>
+     <td><dl><dt><code>max(2, 3) = 3</code></dt></dl></td></tr> <tr><td>Minimum</td>
+     <td><code>min(x, y)</code></td>
+     <td><dl><dt><code>min(2, 3) = 2</code></dt></dl></td></tr> <tr><td>Rounding</td>
+     <td><code>round(x)</code></td>
+     <td><dl><dt><code>round(3.5) = 4</code></dt><dt><code>round(-3.5) = -4</code></dt></dl></td></tr> <tr><td>Sine</td>
+     <td><code>sin(x)</code></td>
+     <td><dl><dt><code>sin(pi/2) = 1</code></dt></dl></td></tr> <tr><td>Square root</td>
+     <td><code>sqrt(x)</code></td>
+     <td><dl><dt><code>sqrt(9) = 3</code></dt></dl></td></tr> <tr><td>Tangent</td>
+     <td><code>tan(x)</code></td>
+     <td><dl><dt><code>tan(pi/4) = 1</code> (approximately)</dt></dl></td></tr></table>
+
+<p><h2>Pitfalls</h2>
+
+<p>When you write <code>a+b*c</code>, should that mean to add <i>a</i> and <i>b</i>, and then multiply by <i>c</i>?  Or is it add <i>a</i> to the result of
+multiplying <i>b</i> and <i>c</i>?  In other words, which goes first, the
+<code>+</code> or the <code>*</code>?  The answer is clear if you look at the
+original math notation, <i>a+bc</i>: the <i>b</i> and <i>c</i> go together,
+then we add their product to <i>a</i>.  What if you wanted it the other
+way?  In pencil-and-paper math, that'd be <i>(a+b)c</i>, and you can do
+the same thing at the computer as <code>(a+b)*c</code>.  In general,
+operators listed earlier in the reference manual above, like <code>*</code>, come before later ones, like <code>+</code>.
+
+<p>Write <code>0 &lt; x and x &lt; 5</code>, rather than <code>0 &lt; x &lt; 5</code>.  The
+latter is interpreted as <code>(0 &lt; x) &lt; 5</code>, which first evaluates
+<code>0 &lt; x</code> yielding a truth value (1 or 0 for true or false), then
+compares that truth value to 5.  Don't do that!
+
+<p><code>a/b*c</code> is not <code>a/(b*c)</code>.  In handwritten math notation
+you could write that with <code>a</code> above the division line and <code>b*c</code> vertically below it, but we can't do that here: everything is
+horizontal and so the program can't tell if you meant <code>(a/b)*c</code>
+or <code>a/(b*c)</code>.  (It chooses the first, in fact.)  When in doubt,
+use parentheses.
+
+<p>The program does not understand <code>sin x</code>, but requires <code>sin(x)</code> instead.  This is because, if you said <code>sin x * y</code>, it'd
+be uncertain whether you meant <code>sin(x * y)</code> or <code>(sin(x)) *
+y</code>.  So all the functions need parentheses; the lessened ambiguity is
+worth the extra typing.
+
+<p>While you can refer to real numbers like pi and e and the square root
+of 2, this program can't represent them exactly; it only holds onto a
+fixed number of digits.  For example, computing <code>tan(pi/4)</code>
+doesn't give 1 exactly, but 0.99999999999999989.  You can get
+completely bogus answers if your formulas are too sensitive to these
+imprecisions; there isn't space here to treat this issue.</body>
+</html>

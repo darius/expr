@@ -1,0 +1,44 @@
+{\def {\page \=name \=headtags \&rest}
+  {{\head {\if \headtags \headtags {}}
+	  {\title \name}}
+   {\body \bgcolor=ivory
+    \rest}}}
+
+{\def {\table3 \&rest}
+  {\def {\link-table-item \item}
+    {\tr
+     {\td {\car \item}}
+     {\td {\car {\cdr \item}}}
+     {\apply \td {\cdr {\cdr \item}}}}}
+  {\table \cellpadding=5 \align=center \width=95% \border=0
+   {\lmap \link-table-item \rest}}}
+
+{\def {\headered-list \&rest}
+  {\def {\headered-list-item \item}
+    {\li {\b {\car \item}}
+         {\br}
+	 {\cdr \item}}}
+  {\ul {\lmap \headered-list-item \rest}}}
+
+{\def {\numbered-list \&rest}
+  {\ol {\lmap \li \rest}}}
+
+{\def {\link \name \ref}
+  {\a \href=\ref \name}}
+
+{\def {\simple-link \name}
+  {\a \href=\name \name}}
+
+{\def {\eaddr \addr}
+  {\a \href={mailto:\addr} <\addr>}}
+
+{\def {\latte}
+  {\a \href=http://www.latte.org/ Latte}}
+
+{\def {\section \title \&rest}
+  {{\h2 \title}
+   {\ul \rest}}}
+
+{\def {\section \name \&rest}
+  {{\h2 \name}
+   \rest}}

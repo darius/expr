@@ -1,0 +1,67 @@
+{\page \name={Expressing Formulas}
+
+{\h1 Expressing formulas}
+
+Here's how you can enter your formulas.  It's almost but not quite
+like ordinary math notation from the textbooks; there are differences
+because you have to type into input boxes instead of writing things
+out freehand.  For instance, to express {\i x{\sup 2}}+1 you type in
+{\code x^2+1}.
+
+{\h2 Basics}
+
+Adding and subtracting work as you'd expect: {\code x+5}, {\code 1-x}.
+
+To multiply, use {\code *}: {\code 7*x} means 7 times {\i x}.
+
+To divide, use {\code /}: {\code x/3} means {\i x} divided by 3.
+
+{\i x {\sup n}} is written {\code x^n}.
+
+The square root of {\i x} is written {\code sqrt(x)}.
+
+Putting all this together, here's a bigger example, a solution to the
+quadratic equation:{\br}{\code sqrt(b^2 - 4*a*c) / (2*a)}.
+
+{\h2 Reference Manual}
+
+@table@
+
+{\h2 Pitfalls}
+
+When you write {\code a+b*c}, should that mean to add {\i a} and {\i
+b}, and then multiply by {\i c}?  Or is it add {\i a} to the result of
+multiplying {\i b} and {\i c}?  In other words, which goes first, the
+{\code +} or the {\code *}?  The answer is clear if you look at the
+original math notation, {\i a+bc}: the {\i b} and {\i c} go together,
+then we add their product to {\i a}.  What if you wanted it the other
+way?  In pencil-and-paper math, that'd be {\i (a+b)c}, and you can do
+the same thing at the computer as {\code (a+b)*c}.  In general,
+operators listed earlier in the reference manual above, like {\code
+*}, come before later ones, like {\code +}.
+
+Write {\code 0 < x and x < 5}, rather than {\code 0 < x < 5}.  The
+latter is interpreted as {\code (0 < x) < 5}, which first evaluates
+{\code 0 < x} yielding a truth value (1 or 0 for true or false), then
+compares that truth value to 5.  Don't do that!
+
+{\code a/b*c} is not {\code a/(b*c)}.  In handwritten math notation
+you could write that with {\code a} above the division line and {\code
+b*c} vertically below it, but we can't do that here: everything is
+horizontal and so the program can't tell if you meant {\code (a/b)*c}
+or {\code a/(b*c)}.  (It chooses the first, in fact.)  When in doubt,
+use parentheses.
+
+The program does not understand {\code sin x}, but requires {\code
+sin(x)} instead.  This is because, if you said {\code sin x * y}, it'd
+be uncertain whether you meant {\code sin(x * y)} or {\code (sin(x)) *
+y}.  So all the functions need parentheses; the lessened ambiguity is
+worth the extra typing.
+
+While you can refer to real numbers like pi and e and the square root
+of 2, this program can't represent them exactly; it only holds onto a
+fixed number of digits.  For example, computing {\code tan(pi/4)}
+doesn't give 1 exactly, but 0.99999999999999989.  You can get
+completely bogus answers if your formulas are too sensitive to these
+imprecisions; there isn't space here to treat this issue.
+}
