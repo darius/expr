@@ -1,8 +1,6 @@
 // Variables associate values with names.
 // Copyright 1996 by Darius Bacon; see the file COPYING.
 
-// 01Jun96: made `make' synchronized.
-
 package expr;
 
 import java.util.Hashtable;

@@ -83,6 +83,8 @@ more lines, you can help the parser catch more errors.  By default, it
 allows any variable to be in the input expression, even variables you
 haven't defined.  Here's how to tell it what's allowed:
 
+XXX doesn't work?
+
     Variable x = Variable.make("x");
     Parser parser = new Parser();
     parser.allow(x);

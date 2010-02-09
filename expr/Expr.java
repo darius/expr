@@ -1,8 +1,6 @@
 // Mathematical expressions.
 // Copyright 1996 by Darius Bacon; see the file COPYING.
 
-// 14May96: added constant folding
-
 package expr;
 
 /**
