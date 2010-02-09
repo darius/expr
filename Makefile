@@ -15,7 +15,6 @@ jdoc:
 	cd javadoc; javadoc -classpath .. ../expr/*.java
 
 example/BasicGraphApplet.class: example/BasicGraphApplet.java example/expr.jar
-	#javac -classpath example/expr.jar:example example/BasicGraphApplet.java
 	javac -sourcepath example/expr.jar:example example/BasicGraphApplet.java
 
 # We need a copy of expr.jar in the example directory because of 
