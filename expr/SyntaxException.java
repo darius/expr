@@ -51,7 +51,7 @@ public class SyntaxException extends Exception {
     }
 
     /** Give a long, hopefully helpful error message.
-     * @returns the message */
+     * @return the message */
     public String explain() {
 	StringBuffer sb = new StringBuffer();
 
