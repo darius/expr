@@ -69,7 +69,7 @@ public class RegressionTest {
 	expect(-4, "floor(-3.5)");
 	expect(1, "log(2.7182818284590451)");
 	expect(4, "round(3.5)");
-	expect(-3, "round(-3.5)"); // This used to produce -4. WTF?
+	expect(-4, "round(-3.5)");
 	expect(1, "sin(pi/2)");
 	expect(3, "sqrt(9)");
 	expect(0.99999999999999989, "tan(pi/4)");

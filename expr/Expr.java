@@ -133,7 +133,7 @@ class UnaryExpr extends Expr {
 	case FLOOR: return Math.floor(arg);
 	case LOG:   return Math.log(arg);
 	case NEG:   return -arg;
-	case ROUND: return Math.round(arg);
+	case ROUND: return Math.rint(arg);
 	case SIN:   return Math.sin(arg);
 	case SQRT:  return Math.sqrt(arg);
 	case TAN:   return Math.tan(arg);
