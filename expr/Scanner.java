@@ -110,7 +110,7 @@ class Scanner {
         } else if (Character.isDigit(s.charAt(i)) || '.' == s.charAt(i)) {
             return scanNumber(i);
         } else {
-            tokens.addElement(makeErrorToken("Unknown lexeme", i, i+1));
+            tokens.addElement(makeErrorToken(i, i+1));
             return i+1;
         }
     }
@@ -141,7 +141,7 @@ class Scanner {
         try {
             nval = Double.valueOf(text).doubleValue();
         } catch (NumberFormatException nfe) {
-            tokens.addElement(makeErrorToken("Not a number", from, i));
+            tokens.addElement(makeErrorToken(from, i));
 	    return i;
         }
 
@@ -149,8 +149,7 @@ class Scanner {
 	return i;
     }
 
-    private Token makeErrorToken(String complaint, int from, int i) {
-	// TODO: incorporate the complaint somehow
+    private Token makeErrorToken(int from, int i) {
 	return new Token(Token.TT_ERROR, 0, s, from, i);
     }
 }
