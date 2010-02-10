@@ -11,7 +11,8 @@ not high priorities, but the code is simple enough that it shouldn't
 be hard to change to your taste.
 
 Javadoc comments in the source files give full documentation, and
-[user-doc.html](expr/blob/master/doc/user-doc.html) gives a user's-eye view.
+[user-doc.html](expr/blob/master/doc/user-doc.html) gives a user's-eye
+view.
 
 
 Installing it
@@ -24,7 +25,8 @@ To try it out, put the `expr` directory in your classpath.  Then
 
 	java expr.Example '3.14159 * x^2' 0 4 1
 
-should write the output given in [Example.java](expr/blob/master/expr/Example.java).
+should write the output given in
+[Example.java](expr/blob/master/expr/Example.java).
 
 To incorporate this code into an applet, put expr.jar somewhere
 accessible to your webserver, and reference it with the ARCHIVE
@@ -43,8 +45,9 @@ Using it
 ========
 
 To get started quickly without reading the documentation, see the
-example code in [Example.java](expr/blob/master/expr/Example.java).  Here are some
-excerpts from it, with each bit preceded by an explanation:
+example code in [Example.java](expr/blob/master/expr/Example.java).
+Here are some excerpts from it, with each bit preceded by an
+explanation:
 
 `expr` is an object representing a parsed expression.
 
@@ -109,5 +112,5 @@ changing `parser.allow(x)` to `parser.allow(null)`.
 Contact
 =======
 
-See the file [COPYING](expr/blob/master/COPYING) for copyright info.  Send questions
-and bug reports to Darius Bacon <darius@wry.me>.
+See the file [COPYING](expr/blob/master/COPYING) for copyright info.
+Send questions and bug reports to Darius Bacon <darius@wry.me>.
