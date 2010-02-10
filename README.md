@@ -1,3 +1,6 @@
+expr
+====
+
 This package parses and evaluates mathematical expressions over
 floating-point numbers, like `2 + 2` or `cos(x/(2*pi)) * cos(y/(2*pi))`.
 
@@ -8,7 +11,7 @@ not high priorities, but the code is simple enough that it shouldn't
 be hard to change to your taste.
 
 Javadoc comments in the source files give full documentation, and
-[user-doc.html](doc/user-doc.html) gives a user's-eye view.
+[user-doc.html](tree/master/doc/user-doc.html) gives a user's-eye view.
 
 
 Installing it
@@ -21,7 +24,7 @@ To try it out, put the `expr` directory in your classpath.  Then
 
 	java expr.Example '3.14159 * x^2' 0 4 1
 
-should write the output given in [Example.java](expr/Example.java).
+should write the output given in [Example.java](tree/master/expr/Example.java).
 
 To incorporate this code into an applet, put expr.jar somewhere
 accessible to your webserver, and reference it with the ARCHIVE
@@ -33,14 +36,14 @@ attribute in your HTML:
 	</APPLET>
 
 To provide documentation for your users, put
-[user-doc.html](doc/user-doc.html) where they can read it.
+[user-doc.html](tree/master/doc/user-doc.html) where they can read it.
 
 
 Using it
 ========
 
 To get started quickly without reading the documentation, see the
-example code in [Example.java](expr/Example.java).  Here are some
+example code in [Example.java](tree/master/expr/Example.java).  Here are some
 excerpts from it, with each bit preceded by an explanation:
 
 `expr` is an object representing a parsed expression.
@@ -77,7 +80,7 @@ For values of `x` in the range from `low` to `high`, increasing by
     }
 
 There's another included example: the graphing applet in
-[example.html](example/example.html).
+[example.html](tree/master/example/example.html).
 
 
 Other features
@@ -106,5 +109,5 @@ changing `parser.allow(x)` to `parser.allow(null)`.
 Contact
 =======
 
-See the file [COPYING](COPYING) for copyright info.  Send questions
+See the file [COPYING](tree/master/COPYING) for copyright info.  Send questions
 and bug reports to Darius Bacon <darius@wry.me>.
