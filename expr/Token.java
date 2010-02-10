@@ -1,3 +1,5 @@
+// A lexical token from an input string.
+
 package expr;
 
 class Token {

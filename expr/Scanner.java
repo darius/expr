@@ -1,3 +1,5 @@
+// Scan lexical tokens in input strings.
+
 package expr;
 
 import java.util.Vector;
