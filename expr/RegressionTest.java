@@ -62,6 +62,8 @@ public class RegressionTest {
 	expect(137, "if(0, 42, 137)");
 	expect(42, "if(1, 42, 137)");
 
+	expect(-3.0 * Math.pow(1.01, 100.1), "  -3 * 1.01^100.1  ");
+
 	Variable x = Variable.make("x");
 	x.setValue(-40);
 	expect(-171.375208, "-0.00504238 * x^2 + 2.34528 * x - 69.4962");
