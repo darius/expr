@@ -87,10 +87,8 @@ public abstract class Expr {
 				      Expr consequent,
 				      Expr alternative) {
 	Expr cond = new ConditionalExpr(test, consequent, alternative);
-	if (test instanceof LiteralExpr &&
-	    consequent instanceof LiteralExpr &&
-	    alternative instanceof LiteralExpr)
-	    return new LiteralExpr(cond.value());
+	if (test instanceof LiteralExpr)
+            return test.value() != 0 ? consequent : alternative;
 	else
 	    return cond;
     }
