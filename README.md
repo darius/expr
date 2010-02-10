@@ -14,7 +14,8 @@ Javadoc comments in the source files give full documentation, and
 Installing it
 =============
 
-To install, put `expr.jar` in your classpath.
+To install, put `expr.jar` in your classpath. (You'll need to create
+it first by running `make`, if you downloaded this from GitHub.)
 
 To try it out, put the `expr` directory in your classpath.  Then
 
