@@ -87,10 +87,11 @@ public class Parser {
      *       @param input the unparsed expression
      *      @exception SyntaxException if the input is unparsable */
     public Expr parseString(String input) throws SyntaxException {
-	String operatorChars = "*/+-^<>=,";
 	tokens = new Scanner(input, operatorChars);
 	return reparse();
     }
+
+    private static final String operatorChars = "*/+-^<>=,()";
 
     private Expr reparse() throws SyntaxException {
 	tokens.index = -1;
@@ -320,16 +321,17 @@ public class Parser {
     }
 
     private Token[] possibleInsertions(Token t) {
-	String ops = tokens.getOperatorChars();
 	Token[] ts = 
-	    new Token[ops.length() + 6 + procs1.length + procs2.length];
+	    new Token[operatorChars.length() + 6 + procs1.length + procs2.length];
 	int i = 0;
 
 	Token one = new Token(Token.TT_NUMBER, 1, "1", t);
 	ts[i++] = one;
 
-	for (int j = 0; j < ops.length(); ++j)
-	    ts[i++] = new Token(ops.charAt(j), 0, "" + ops.charAt(j), t);
+	for (int j = 0; j < operatorChars.length(); ++j) {
+            char c = operatorChars.charAt(j);
+	    ts[i++] = new Token(c, 0, Character.toString(c), t);
+        }
 
 	ts[i++] = new Token(Token.TT_WORD, 0, "x", t);
 

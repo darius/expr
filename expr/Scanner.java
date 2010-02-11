@@ -15,7 +15,7 @@ class Scanner {
 
     public Scanner(String string, String operatorChars) {
         this.s = string;
-	this.operatorChars = operatorChars + "()";
+	this.operatorChars = operatorChars;
 
         int i = 0;
 	do {
@@ -25,10 +25,6 @@ class Scanner {
 
     public String getInput() {
 	return s;
-    }
-
-    public String getOperatorChars() {
-	return operatorChars;
     }
 
     // The tokens may have been diddled, so this can be different from 
