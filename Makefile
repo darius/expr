@@ -5,7 +5,7 @@ classfiles:
 
 classfiles = $(shell echo expr/{BinaryExpr,Parser,Token,ConditionalExpr,Scanner,UnaryExpr,Expr,SyntaxException,Variable,LiteralExpr}.class)
 
-expr.jar:
+expr.jar: $(classfiles)
 	jar cf expr.jar $(classfiles)
 
 doc/user-doc.html: doc/table.awk doc/table.text doc/user-doc.latte doc/style.latte
