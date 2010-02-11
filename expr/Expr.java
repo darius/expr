@@ -94,12 +94,9 @@ public abstract class Expr {
     }
 }
 
-// These classes are all private to this module so that I can get rid
-// of them later.  For applets you want to use as few classes as
-// possible to avoid http connections at load time; it'd be profitable
-// to replace all these subtypes with bytecodes for a stack machine,
-// or perhaps a type that's the union of all of them (see class Node
-// in java/demo/SpreadSheet/SpreadSheet.java).
+// These classes are all private to this module because we could
+// plausibly want to do it in a completely different way like a stack
+// machine.
 
 class LiteralExpr extends Expr {
     double v;
