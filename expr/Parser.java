@@ -45,7 +45,7 @@ import java.util.Vector;
 public class Parser {
 
     // Built-in constants
-    static private Variable pi = Variable.make("pi");
+    static private final Variable pi = Variable.make("pi");
     static {
 	pi.setValue(Math.PI);
     }
@@ -55,8 +55,10 @@ public class Parser {
      *       @param input the unparsed expression
      *      @exception SyntaxException if the input is unparsable */
     static public Expr parse(String input) throws SyntaxException {
-	return new Parser().parseString(input);
+	return vanilla_parser.parseString(input);
     }
+
+    static private final Parser vanilla_parser = new Parser();
 
     /** Set of Variable's that are allowed to appear in input expressions. 
      * If null, any variable is allowed. */
