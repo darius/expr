@@ -174,13 +174,6 @@ public class Parser {
 	Expr.ATAN2, Expr.MAX, Expr.MIN
     };
 	
-    private boolean atStartOfFactor() {
-	return token.ttype == Token.TT_NUMBER
-	    || token.ttype == Token.TT_WORD
-	    || token.ttype == '('
-	    || token.ttype == '-';
-    }
-
     private Expr parseFactor() throws SyntaxException {
 	switch (token.ttype) {
 	case Token.TT_NUMBER: {
