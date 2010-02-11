@@ -95,8 +95,8 @@ public abstract class Expr {
 }
 
 // These classes are all private to this module because we could
-// plausibly want to do it in a completely different way like a stack
-// machine.
+// plausibly want to do it in a completely different way, such as a
+// stack machine.
 
 class LiteralExpr extends Expr {
     double v;
