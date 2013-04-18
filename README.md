@@ -112,5 +112,5 @@ changing `parser.allow(x)` to `parser.allow(null)`.
 Contact
 =======
 
-See the file [COPYING](expr/blob/master/COPYING) for copyright info.
+See the file [COPYING](COPYING) for copyright info.
 Send questions and bug reports to Darius Bacon <darius@wry.me>.
