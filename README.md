@@ -19,7 +19,9 @@ Installing it
 =============
 
 To install, put `expr.jar` in your classpath. (You'll need to create
-it first by running `make`, if you downloaded this from GitHub.)
+it first by running `make`, if you downloaded this from GitHub. If you
+don't have `make`, then run `javac -O expr/*.java` and then `jar cf
+expr.jar expr/*.class`.)
 
 To try it out, put the `expr` directory in your classpath.  Then
 
