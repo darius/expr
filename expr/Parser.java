@@ -41,7 +41,7 @@ import java.util.Vector;
   <LI>42
   <LI>2-3
   <LI>cos(x^2) + sin(x^2)
-  <UL> */
+  </UL> */
 public class Parser {
 
     // Built-in constants
